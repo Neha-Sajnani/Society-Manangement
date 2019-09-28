@@ -13,97 +13,9 @@
         android:layout_height="213dp"
         android:layout_marginTop="0dp"
         app:srcCompat="@drawable/gradient" />
-
     <LinearLayout
-        android:background="#FFF"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:orientation="vertical"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_marginTop="100dp">
-
-        <EditText
-            android:id="@+id/from_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="43dp"
-            android:ems="10"
-            android:hint="From"
-            android:inputType="text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/vfrom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="33dp"
-            android:layout_marginTop="8dp"
-            android:text="+"
-            android:textSize="24dp"
-            android:background="@drawable/custom_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/from_date"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/to_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="43dp"
-        android:layout_marginTop="21dp"
-        android:ems="10"
-        android:hint="To"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/from_date" />
-
-        <Button
-            android:id="@+id/vto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="33dp"
-            android:layout_marginTop="9dp"
-            android:text="+"
-            android:textSize="24dp"
-            android:background="@drawable/custom_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/to_date"
-            app:layout_constraintTop_toBottomOf="@+id/vfrom" />
-    </LinearLayout>
-
-        <Button
-            android:id="@+id/view_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="84dp"
-            android:layout_marginTop="74dp"
-            android:background="#ab47bc"
-            android:onClick="onClick"
-            android:text="Cancel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/to_date" />
-
-    <Button
-        android:id="@+id/view_done"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginTop="740dp"
-        android:onClick="onClick"
-        android:text="Done"
-        app:layout_constraintEnd_toEndOf="parent"
-       />
-
-
+        android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/anyReport"
@@ -114,5 +26,105 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view_cancel" />
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="200dp"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+           >
+
+            <EditText
+                android:id="@+id/from_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="From"
+                android:inputType="text"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/vfrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/custom_button"
+                android:text="+"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/from_date"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/to_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:ems="10"
+            android:hint="To"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/vto"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/custom_button"
+            android:text="+"
+            android:textSize="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/to_date" />
+
+    </LinearLayout>
+
+
+        <Button
+            android:id="@+id/view_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="470dp"
+            android:background="@drawable/custom_button"
+            android:onClick="onClick"
+            android:text="Cancel"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/view_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:onClick="onClick"
+        android:background="@drawable/custom_button"
+        android:text="Done"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <android.support.v7.widget.AppCompatImageView
+
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/white" />
+
+
 
 </RelativeLayout>

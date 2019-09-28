@@ -16,43 +16,112 @@
         android:layout_marginTop="0dp"
         app:srcCompat="@drawable/gradient" />
 
+
+
     <LinearLayout
-        android:background="#FFF"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:orientation="vertical"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:layout_marginTop="100dp"/>
-
-    <Button
-        android:id="@+id/upload_Issue"
-        android:layout_width="194dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="1"
-        android:background="@drawable/custom_button"
-        android:text="Upload Issue"
-        android:textAllCaps="false"
-        android:textSize="15dp" />
-
-    <Button
-        android:id="@+id/view_all_issues"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="1"
-        android:background="@drawable/custom_button"
-        android:text="View Any Issue"
-        android:textAllCaps="false"
-        android:textSize="15dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="150dp"
+        android:padding="20dp">
 
+        <TextView
+            android:id="@+id/fragment_issue_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Issue Title"
+            android:layout_marginTop="35dp"
+            android:layout_gravity="center"
+            android:textSize="40dp"/>
+
+        <TextView
+            android:id="@+id/fragment_issue_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="Issue Description"
+            android:gravity="center"
+            android:textSize="30dp" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/fragment_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes:   "
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/fragment_yes_votes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Yes Votes"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/fragment_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No:   "
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/fragment_no_votes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="No Votes"
+            android:textSize="16dp" />
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voting Deadline: "
+                android:textSize="25dp" />
+
+            <TextView
+            android:id="@+id/voting_deadline_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Voting Deadline Date"
+            android:textSize="19dp" />
+
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deadline Time: "
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/deadline_time_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Deadline Time"
+            android:textSize="20dp" />
+</LinearLayout>
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/issue_recyclerview"
@@ -62,146 +131,60 @@
         android:layout_gravity="center_horizontal"
         />
 
-
+    <TextView
+        android:id="@+id/currentIssue_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Current Issue"
+        android:fontFamily="sans-serif-black"
+        android:textAlignment="center"
+        android:textSize="30dp">
+    </TextView>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="@dimen/cardview_compat_inset_shadow">
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="30dp">
+
+        <Button
+            android:id="@+id/upload_Issue"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Upload Issue"
+            android:textAllCaps="false"
+            android:textSize="15dp" />
 
 
         <Button
             android:id="@+id/view_current_issue"
-            android:layout_width="wrap_content"
+            android:layout_width="107dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:background="@drawable/custom_button"
             android:text="Current Issue"
             android:textAllCaps="false"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"/>
+
+
+        <Button
+            android:id="@+id/view_all_issues"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:layout_marginLeft="10dp"
+            android:text="View Any Issue"
+            android:textAllCaps="false"
             android:textSize="15dp" />
+</LinearLayout>
 
-        <LinearLayout
-            android:layout_width="420dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/fragment_issue_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="Issue Title"
-                android:textSize="40dp" />
-
-            <TextView
-                android:id="@+id/fragment_issue_desc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="52dp"
-                android:hint="Issue Description"
-                android:textSize="16dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp">
-
-                <TextView
-                    android:id="@+id/fragment_yes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:text="Yes:"
-                    android:textSize="16dp" />
-
-                <TextView
-                    android:id="@+id/fragment_yes_votes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="Yes Votes"
-                    android:textSize="16dp" />
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:id="@+id/fragment_no"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No:"
-                    android:textSize="16dp" />
-
-                <TextView
-                    android:id="@+id/fragment_no_votes"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="No Votes"
-                    android:textSize="16dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Voting Deadline: "
-                    android:textSize="16dp" />
-
-                <TextView
-                    android:id="@+id/voting_deadline_display"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="Voting Deadline Date"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="40dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Deadline Time: "
-                    android:textSize="16dp" />
-
-                <TextView
-                    android:id="@+id/deadline_time_display"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="Deadline Time"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="340dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/currentIssue_view"
-        android:orientation="vertical"
-        android:layout_gravity="center_horizontal">
-
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:text="Current Issue"
-        android:textAlignment="center"
-        android:textSize="30dp" />
 </RelativeLayout>
+
 

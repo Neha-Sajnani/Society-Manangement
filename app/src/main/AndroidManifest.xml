@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".SocietyName">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +37,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".ResidentVoteOnIssueFragment" />
         <activity android:name=".CreateNotice" />
-        <activity android:name=".UserType"/>
+        <activity android:name=".UserType" />
     </application>
 
 </manifest>

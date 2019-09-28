@@ -4,4 +4,13 @@
     <color name="colorPrimaryDark">#a8e063</color>
     <color name="colorAccent">#56ab2f</color>
     <color name="button">#BADA89</color>
+    <color name="white">#ffff</color>
+    <color name="transperentWhite">#cccccc</color>
+
+
+
+    <color name="tab">#C0C0C0</color>
+    <color name="intro_title">#000000</color>
+    <color name="Desc">#65656565</color>
+
 </resources>

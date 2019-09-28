@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="213dp"
+        android:layout_marginTop="0dp"
+        app:srcCompat="@drawable/gradient" />
+
+
+    <LinearLayout
+        android:background="#FFF"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="300dp">
 
     <android.support.v7.widget.CardView
         android:id="@+id/issue_cardview"
@@ -23,35 +44,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Issue Title"
-                android:textSize="20dp"/>
+                android:layout_gravity="center"
+                android:textSize="40dp"
+                android:fontFamily="sans-serif-black"/>
 
             <TextView
                 android:id="@+id/display_issue_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="30dp"
                 android:text="Issue Description"
-                android:textSize="16dp"/>
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-condensed"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="20dp">
 
                 <TextView
                     android:id="@+id/display_yes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="Yes:"
-                    android:textSize="16dp" />
+                    android:text="Yes:  "
+                    android:textSize="25dp"
+                    android:fontFamily="sans-serif-condensed"/>
 
                 <TextView
                     android:id="@+id/display_yes_votes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Yes Votes"
-                    android:textSize="16dp" />
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"/>
 
                 <TextView
                     android:layout_width="100dp"
@@ -61,36 +86,38 @@
                     android:id="@+id/display_no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="No:"
-                    android:textSize="16dp" />
+                    android:text="No:  "
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"/>
 
                 <TextView
                     android:id="@+id/display_no_votes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:text="No Votes"
-                    android:textSize="16dp" />
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Voting Deadline Date: "
-                    android:textSize="16dp"/>
+                    android:text="Deadline Date: "
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"/>
 
                 <TextView
                     android:id="@+id/display_voting_deadline_display"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Voting Deadline Date"
-                    android:textSize="16dp"/>
+                    android:hint="Deadline Date"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"/>
 
             </LinearLayout>
 
@@ -98,26 +125,35 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="40dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Voting Deadline Time: "
-                    android:textSize="16dp"/>
+                    android:text="Deadline Time: "
+                    android:textSize="20dp"/>
 
                 <TextView
                     android:id="@+id/display_deadline_time_display"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Voting Deadline Time"
-                    android:textSize="16dp"/>
-
-
+                    android:hint="Deadline Time"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-condensed"/>
                 </LinearLayout>
 
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
-</LinearLayout>
+
+    </LinearLayout>
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_issue" />
+
+</RelativeLayout>
